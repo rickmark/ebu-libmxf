@@ -34,6 +34,7 @@
 #include "config.h"
 #endif
 
+#ifdef _WIN32
 #if (_MSC_VER >= 1700) // Visual C++ 2010 has conflicts with stdint.h and so disable this include for that version
 #include <intsafe.h>
 #else
@@ -511,3 +512,5 @@ int mxf_win32_mmap_open_modify(const char *filename, int flags, MXFFile **mxfFil
 {
     return mxf_win32_mmap_open_mb(filename, flags, MODIFY_MODE, mxfFile);
 }
+
+#endif

@@ -33,6 +33,8 @@
 #include "config.h"
 #endif
 
+#define PRIszt ""
+
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>

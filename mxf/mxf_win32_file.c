@@ -33,6 +33,7 @@
 #include "config.h"
 #endif
 
+#ifdef _WIN32
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
@@ -249,3 +250,5 @@ int mxf_win32_file_open_modify(const char *filename, int flags, MXFFile **mxfFil
     return mxf_win32_file_open(filename, flags, MODIFY_MODE, mxfFile);
 }
 
+
+#endif
